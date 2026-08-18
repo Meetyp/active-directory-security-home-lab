@@ -72,6 +72,12 @@ After installing the latest Windows updates, I promoted the server to a Domain C
 
 PowerShell was used to verify the server hostname and review the installed Windows Server roles and features.
 
+### Server Role Verification
+
+![PowerShell verification of Windows Server roles and features](screenshots/01-server-role-verification.png)
+
+*PowerShell verification of the server hostname and installed Windows Server roles and features.*
+
 ### PowerShell Verification
 
 ```powershell
@@ -90,6 +96,12 @@ This allowed me to verify the system configuration and confirm that the required
 ## 2. Active Directory Verification with PowerShell
 
 PowerShell was also used to retrieve computer objects from Active Directory and review information about the systems registered in the directory.
+
+### Active Directory Computer Verification
+
+![PowerShell Active Directory computer verification](screenshots/02-ad-computer-verification.png)
+
+*PowerShell verification of Active Directory computer objects and system information.*
 
 The following command was used to retrieve computer names, IPv4 addresses, operating systems, and service-pack information:
 
@@ -195,6 +207,12 @@ This demonstrated that the delegated account could not modify an Active Director
 
 The test helped validate that the delegated permissions were restricting administrative access as intended.
 
+### Delegated Permission Test
+
+![Active Directory delegated permission access denied](screenshots/03-delegated-access-denied.png)
+
+*Validation test showing that the delegated account could not modify a user outside its authorized Organizational Unit.*
+
 ---
 
 ## 6. Network Share and Security Groups
@@ -242,6 +260,12 @@ The account was able to access the appropriate HR resources but was denied acces
 This confirmed that the NTFS permissions and inheritance configuration were enforcing the intended access restrictions.
 
 The test demonstrated the difference between having access to a parent resource and having authorization to access a more restricted child resource.
+
+### NTFS Access Control Test
+
+![NTFS permission access denied](screenshots/04-ntfs-access-denied.png)
+
+*Access-control test confirming that a user without the required Managers group membership was denied access to the restricted HR Managers folder.*
 
 ---
 
